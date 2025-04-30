@@ -1,0 +1,127 @@
+/* Basic Reset / Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles - centering content, basic font */
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0; /* Light grey background */
+  padding: 20px;
+  text-align: center; /* Center text for all child elements */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container for timer, status, and round */
+.timer-container {
+  background-color: #fff; /* White background for the timer box */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 300px; /* Set a max-width for better appearance on large screens */
+}
+
+/* Timer display styling */
+#timer-display {
+  font-size: 4rem; /* Large font size for the time */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1; /* Adjust line height */
+}
+
+/* Status indicator styling (base) */
+#status-indicator {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Make status uppercase */
+  min-height: 2rem; /* Ensure space even if empty */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Style for WORK status */
+#status-indicator.work {
+  color: #dc3545; /* Red color for WORK */
+  font-weight: bold;
+}
+
+/* Style for REST status */
+#status-indicator.rest {
+  color: #28a745; /* Green color for REST */
+  font-weight: bold;
+}
+
+/* Style for PAUSED/PREPARE/FINISHED status */
+#status-indicator.paused,
+#status-indicator.prepare,
+#status-indicator.finished /* Added finished class explicitly */
+{
+  color: #6c757d; /* Grey color for PAUSED/PREPARE/FINISHED */
+  font-weight: normal;
+}
+
+
+/* Round counter styling */
+#round-counter {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Container for control buttons */
+.controls-container {
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+#controls button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  transition: background-color 0.2s ease; /* Smooth transition on hover */
+}
+
+#controls button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the animation container */
+.animation-container {
+  margin-top: 20px;
+  width: 90%;
+  max-width: 300px; /* Match timer container width */
+  /* Remove fixed min-height, let image define height */
+  /* Remove dashed border */
+  display: flex; /* Keep flex for alignment if needed */
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Hide potential overflow if GIF is slightly larger */
+}
+
+/* Style the image inside the animation container */
+.animation-container img {
+  display: block; /* Remove extra space below image */
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  height: auto;   /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Match container border radius */
+}

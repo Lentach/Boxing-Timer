@@ -1,0 +1,11 @@
+{
+  "name": "nowy-projekt-html-css-js",
+  "version": "1.0.0",
+  "description": "Prosty szablon projektu HTML, CSS i JS",
+  "main": "app.js",
+  "scripts": {
+    "start": "echo 'Otwórz index.html w przeglądarce.'"
+  },
+  "author": "",
+  "license": "ISC"
+} 
